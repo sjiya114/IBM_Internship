@@ -2,6 +2,8 @@ import React from 'react'
 import WeatherCard from './WeatherCard'
 import Gallery from './Gallery'
 import { useLocation } from 'react-router-dom'
+import Hourly from './Hourly';
+import NextTen from './NextTen';
 
 function Destination() {
   const location=useLocation();
@@ -12,6 +14,8 @@ function Destination() {
       <h1 className='text-6xl max-md:text-center max-md:text-4xl font-semibold mt-40 text-white'>Welcome to {dest.input}</h1>
       <Gallery dest={dest.input} />
       <WeatherCard dest={dest.input}  />
+      <Hourly dest={dest.input} />
+      <NextTen dest={dest.input}/>
     </div>
   )
 }
